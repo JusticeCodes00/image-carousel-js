@@ -1,0 +1,108 @@
+/* || GENERAL STYLES */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  appearance: none;
+  font-size: 100%;
+  font-family: inherit;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+/* || UTILITIES */
+
+.no-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.position-relative {
+  position: relative;
+}
+
+/* || SITEWIDE */
+
+/* ||  COMPONENTS*/
+
+.frame {
+  width: 400px;
+  overflow: hidden;
+  background: rgba(2, 9, 49, 0.87);
+  border-radius: 5px;
+
+  &:hover .btn {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.track {
+  width: max-content;
+  transition: transform 0.5s ease-in;
+}
+
+.slide {
+  width: 400px;
+  height: 400px;
+}
+
+.btn {
+  position: absolute;
+  width: 40px;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.7),
+    rgba(83, 81, 81, 0.664)
+  );
+  border-radius: 50%;
+  padding: 5px;
+  transition: opacity 0.2s ease-in allow-discrete;
+  display: none;
+}
+
+.btn-next {
+  right: 4px;
+}
+
+.btn-prev {
+  left: 4px;
+}
+
+@starting-style {
+  .frame:hover .btn {
+    opacity: 0;
+  }
+}
